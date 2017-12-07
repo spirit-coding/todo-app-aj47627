@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Create a ToDo</h1>
+  <form ngNativeValidate #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" id="title" required [(ngModel)]="todo.title" name="title">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea class="form-control" id="description" required [(ngModel)]="todo.description" name="description"></textarea>
+    </div>
+    {{todo.description}} 
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
